@@ -1,0 +1,29 @@
+type Query {
+  people(page: Int!): PeopleData
+}
+
+type Result {
+  name: String
+  height: String
+  mass: String
+  color: String
+  eye_color: String
+  skin_color: String
+  birthyear: String
+  gender: String
+  homeworld: String
+  files: [String!]
+  species: [String!]
+  vehicles: [String!]
+  starships: [String!]
+  created: String
+  edited: String
+  url: String
+}
+
+type PeopleData {
+  count: Int
+  next: String
+  previous: String
+  results: [Result]
+}
