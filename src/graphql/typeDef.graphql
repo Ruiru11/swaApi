@@ -1,5 +1,6 @@
 type Query {
-  people(page: Int!,query:String): PeopleData
+  people(page: Int!, query: String): PeopleData
+  person(personId: Int!): Result
 }
 
 type Result {

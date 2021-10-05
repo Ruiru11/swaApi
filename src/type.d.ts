@@ -1,5 +1,4 @@
 export interface IPeopledata {
-
     count:number;
     next:string | null;
     previous?:string | null;
@@ -7,7 +6,7 @@ export interface IPeopledata {
 
 }
 
-type Result = {
+export type Result = {
     name:string,
     height:string,
     mass:string,
@@ -25,4 +24,5 @@ type Result = {
     edited:string,
     url:string,
 }
+
 
