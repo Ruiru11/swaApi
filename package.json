@@ -8,7 +8,7 @@
     "start": "npm run serve",
     "start:dev": " ts-node index.ts",
     "build": "tsc",
-    "serve": "node dist/index.js",
+    "serve": "node index.js",
     "postinstall": "npm run build-ts"
   },
   "repository": {
