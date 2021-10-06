@@ -1,5 +1,6 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
+import cors from 'cors';
 import schema from "./src/graphql";
 
 
@@ -12,11 +13,13 @@ async function startServer() {
 
   const app =  express();
 
+  app.use(cors())
+
   server.applyMiddleware({
     app,path:'/graphql'
   })
 
-  app.listen(4000,() => {
+  app.listen(process.env.PORT || 4000,() => {
     console.log("test if running")
   })
 
